@@ -1,5 +1,4 @@
 use std::mem::replace;
-#[derive(Debug)]
 pub struct Values{
     pub printable: Vec<char>,
     pub available: Vec<String>,
