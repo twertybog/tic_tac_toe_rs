@@ -5,7 +5,7 @@ use crate::board;
 pub fn check(game: &mut Values, player: &str) -> u8{
     let mut parameter:u8;
     'checking: loop {
-        println!("Player '{}' please enter a cell number", player);
+        println!("Player {} please enter a cell number", player);
         let mut player_x = String::new();
         io::stdin().read_line(&mut player_x).unwrap();
         let player_x: String = player_x.trim().parse()
