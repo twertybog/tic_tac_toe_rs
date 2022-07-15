@@ -1,6 +1,6 @@
 use std::io;
+use crate::cli::board;
 use board::Values;
-use crate::board;
 
 pub fn check(game: &mut Values, player: &str) -> u8{
     let mut parameter:u8;
