@@ -1,9 +1,19 @@
-mod board;
-mod players;
-mod availability_check;
-use players::{Player};
-use board::{Values};
+mod cli;
+use cli::board;
+use cli::{players::{Player}, board::{Values},
+    availability_check};
+use std::env;
 fn main() {
+    let arguments: String = env::args().collect();
+    if arguments.contains("--cli"){
+        cli();
+    }
+    else{
+        gui();
+    }
+}
+
+fn cli(){
     let mut players = Player{
         values1: vec![],
         values2: vec![]
@@ -39,4 +49,8 @@ fn main() {
         }
     }
     println!("The game is over.");
+}
+
+fn gui(){
+
 }
