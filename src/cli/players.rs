@@ -6,7 +6,7 @@ pub struct Player {
 impl Player {
     pub fn combination(vector: &Vec<u8>) -> bool{
         let mut interrupter = false;
-        let mut vector = vector;
+        let vector = vector;
         if vector.len() >= 3{
             let combination_result = vector.into_iter()
                 .combinations(3).collect_vec();
